@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guessgame/screens/create_room_screen.dart';
+import 'package:guessgame/screens/join_room.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -49,7 +50,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: const ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(Colors.black),
                         minimumSize: MaterialStatePropertyAll(Size(150, 50))),
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => JoinRoom(),
+                          ),
+                        ),
                     child: const Text(
                       'Join',
                       style:
